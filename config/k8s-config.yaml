@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Config
+clusters:
+  - cluster:
+      server: https://<API_SERVER>:<PORT>
+      certificate-authority: /etc/kubernetes/pki/ca.crt
+    name: kubernetes
+contexts:
+  - context:
+      cluster: kubernetes
+      user: kubernetes-admin
+    name: kubernetes-admin@kubernetes
+current-context: kubernetes-admin@kubernetes
+users:
+  - name: kubernetes-admin
+    user:
+      client-certificate: /etc/kubernetes/pki/admin.crt
+      client-key: /etc/kubernetes/pki/admin.key

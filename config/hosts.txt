@@ -1,0 +1,10 @@
+# Host configuration for the Kubernetes cluster
+# Specify the nodes and their roles below
+
+# Format: <hostname> <IP address> <role>
+# Example:
+# master-node 192.168.1.10 master
+# worker-node-1 192.168.1.11 worker
+# worker-node-2 192.168.1.12 worker
+
+# Add your nodes below
